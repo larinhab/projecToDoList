@@ -1,0 +1,80 @@
+
+@media (min-width: 375px) {
+    body {
+        overflow-y: hidden;
+        height: 10vh;
+        width: 100%;
+        background-color: rgb(26, 160, 250);
+    }
+    
+    #blob {
+        display: none;
+    }
+
+    .todo-container {
+        width: 30%;
+        margin: 0;
+    }
+
+    h1, h2, h3, h4, #todo-form p, #edit-form p {
+        font-size: .5rem;
+    }
+
+    .todo h3 {
+        font-size: .5rem;
+    }
+
+    :placeholder-shown,
+    #filter select {
+        font-size: .3rem;
+    }
+
+    .todo-container header  {
+        border-bottom: none;
+    }
+
+    #todo-form p {
+        padding: .2rem;
+    }
+
+    #todo-form input {
+        width: 5rem;
+        height: 0.5rem;
+        padding: .5rem;
+        margin-left: .2rem;
+    }
+
+    button {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    button i {
+        font-size: .5rem;
+    }
+
+    .flex {
+        flex-direction: column;
+    }
+
+    #search {
+        border-right: none;
+        width: 100%;
+        padding: .2rem;
+    }
+
+    #filter {
+        width: 100%;
+        margin: 0;
+        padding: .2rem;
+    }
+
+    .cancel-edit-btn {
+        margin: .2rem 0 0 3rem;
+        padding: .2rem;
+    }
+}
+
+@media only screen and (min-width: 720px) and (max-width: 1280px){
+
+    }

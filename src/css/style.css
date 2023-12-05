@@ -82,10 +82,9 @@ select {
 
 
 .todo-container {
-    max-width: 600px;
-    margin: 220px auto;
-    padding: 1.5rem;
-
+    max-width: 600px; 
+    margin: 220px auto; 
+    padding: 1.5rem; 
     position: relative;
     z-index: 1;
 }
@@ -99,7 +98,7 @@ select {
 /* Form */
 
 #todo-form input{
-    width: 100rem;
+    width: 100rem; 
 }
 
 #todo-form p {
@@ -225,11 +224,9 @@ select {
 #search {
     display: flex;
     flex-direction: column;
-    
     width: 50%;
     border-right: 2px solid #ddd;
-    
-    padding-right: 1rem;
+    padding-right: 1rem; 
 }
 
 #search form{
@@ -249,7 +246,7 @@ select {
 }
 
 #filter select {
-    display: flex;
+    display: flex; 
     flex: 1;
     margin-bottom: 1rem;
     color: #333;
@@ -272,7 +269,7 @@ select {
     margin-left: 0.4rem;
 }
 .todo h3 {
-    flex: 1;
+    flex: 1; 
     font-size: 0.9rem;
 }
 

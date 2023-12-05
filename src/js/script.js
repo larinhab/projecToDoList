@@ -20,6 +20,44 @@ let oldInputValue;
 
 // Funções
 
+document.addEventListener("DOMContentLoaded", () => {
+    loadTodos();
+    imageAnimation()
+});
+
+function imageAnimation() {
+    const todos = getTodosLocalStorage();
+    
+    if (todos.length > 0) {
+        blobImg.style.transform = "scale(1.8)";
+        blobImg.style.transition = "4s";
+        blobImg.style.width = "760px";
+        blobImg.style.margin = "50px auto";
+        blobImg.style.display = "flex";
+        blobImg.style.alignItems = "center";
+        blobImg.style.justifyContent = "center";
+        blobImg.style.objectFit = "cover";
+        blobImg.style.position = "absolute";
+        blobImg.style.inset = "0";
+        blobImg.style.zIndex = "0";
+        blobImg.style.filter = "drop-shadow(20px 10px 25px grey)";
+    } else {
+        e.preventDefault()
+        blobImg.style.transform = "scale(0)";
+        blobImg.style.transition = "4s";
+        blobImg.style.width = "760px";
+        blobImg.style.margin = "50px auto";
+        blobImg.style.display = "flex";
+        blobImg.style.alignItems = "center";
+        blobImg.style.justifyContent = "center";
+        blobImg.style.objectFit = "cover";
+        blobImg.style.position = "absolute";
+        blobImg.style.inset = "0";
+        blobImg.style.zIndex = "0";
+        blobImg.style.filter = "drop-shadow(20px 10px 25px grey)";
+    }
+}
+
 const saveTodo = (text, done = 0 , save = 1) => {
     const todo = document.createElement("div");
     todo.classList.add("todo");
@@ -46,10 +84,12 @@ const saveTodo = (text, done = 0 , save = 1) => {
     // UTILIZANDO DADOS DA LS
 
     if(done) {
-        todo.classList.add("done");        
-        saveTodoLocalStorage({text: todo.textContent, done: true })
+        todo.classList.add("done");
     }
 
+    if(save) {
+        saveTodoLocalStorage({text, done: 0 })
+    }
 
     //  --------------------------------------
 
@@ -139,11 +179,8 @@ todoForm.addEventListener("submit", (e) => {
     if (inputValue) {
         saveTodo(inputValue);
     }
-
-    blobImg.style.transform = "scale(1.8)"
-    blobImg.style.transition = "4s"
-    blobImg.style.marginTop = "200px" 
-});
+        imageAnimation()
+    });
 
 document.addEventListener("click", (e)=> {
     const targerEl = e.target;
@@ -194,7 +231,6 @@ editForm.addEventListener("submit", (e) => {
     }
 
     toggleForms();
-    console.log('depois de editar')
 })
 
 // // BOTÃO PESQUISA
@@ -238,14 +274,15 @@ const loadTodos = () => {
     });
 };
 
+// Todos toDos da Ls
 const saveTodoLocalStorage = (todo) => {
-    // Todos toDos da Ls
     const todos = getTodosLocalStorage()
     // add novo todo no arr
     todos.push(todo);
     //salvar tudo na Ls
     localStorage.setItem("todos", JSON.stringify(todos))
 };
+
 
 // REMOVER DA LS
 
@@ -283,4 +320,4 @@ const uptadeTextLocalStorage = (todoOldText, todoNewText) => {
     localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-loadTodos()
+//loadTodos()
