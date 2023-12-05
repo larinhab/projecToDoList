@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <title>Lista de tarefas</title>
+    
+     <!-- CSS do Projeto -->
+    <link rel="stylesheet" href="./src/css/style.css">
+    <link rel="shortcut icon" href="./src/assets/logo.svg" type="image/svg">
+     <!-- JavaScript do Projeto -->
+    <script src="./src/js/script.js" defer></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <img id="blob" src="./src/assets/Stacked_blob.png">
+    
+    <div class="todo-container">
+        <header>
+            <h1>Tarefas Diárias</h1>
+        </header>
+
+        <form id="todo-form">
+            <p>O que você quer fazer hoje?</p>
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    id="todo-input" 
+                    placeholder="Adicione uma tarefa">
+                <button type="submit">
+                    <i class="fa-regular fa-plus fa-beat"></i>
+                </button>
+            </div>
+            <button class="cancel-edit-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </form>
+
+        <form id="edit-form" class="hide">
+            <p>Edite sua tarefa</p>
+            <div class="form-control">
+                 <input 
+                    type="text" 
+                    id="edit-input">
+                 <button id="check" type="submit">
+                    <i class="fa-solid fa-check-double"></i>
+                 </button>
+            </div>
+            <button class="cancel-edit-btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </form>
+
+        <div id="toolbar" class="hide">
+        <div id="flex" class="">
+            <div id="search">
+                <h2>Pesquisar:</h2>
+                    <form>
+                        <input 
+                            type="text" 
+                            id="search-input" 
+                            placeholder="Buscar uma tarefa">
+                        <button id="erase-button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+           </div>
+
+            <div id="filter" class="">
+                <h2>Filtrar:</h2>
+                
+                <select id="filter-select">
+                    <option value="all">Todas</option>
+                    <option value="done">Feitas</option>
+                    <option value="todo">A fazer</option>
+            </select>
+            </div>
+
+            </div>
+        </div>
+
+            <div id="todo-list" class="">
+            <!--
+            <div class="todo done">
+                <h3>Estou fazendo alguma coisa..</h3>
+                <button class="add-todo"> 
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button class="edit-todo"> 
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+                <button class="remove-todo"> 
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+            !-->
+            </div>
+    </div>
+</body>
+</html>

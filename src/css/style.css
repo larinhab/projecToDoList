@@ -1,0 +1,293 @@
+/*Geral*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ysabeau SC', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62,5%;
+
+    --ff-button-x: rgb(187, 29, 29);
+    --ff-button-y: rgb(0, 173, 23);
+    --ff-button-e: rgb(25, 23, 145);
+
+    --ff-hover-p: rgb(255,255,255);
+    --ff-color-p: rgb(20, 20, 20);
+
+    --ff-task-done: rgb(134, 134, 134);
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    height: 100vh;
+    overflow: hidden;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 30px;
+    
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+h1, h2, h3, h4,
+#todo-form p,
+#edit-form p {
+    color: var(--ff-hover-p);
+}
+
+button i {
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    font-size: 1.2rem;
+}
+
+input, 
+select {
+    border-radius: 5px;
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.hide {
+    display: none;
+}
+
+/* Header */
+
+#blob {
+    width: 760px;
+    margin: 50px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    filter: drop-shadow(20px 10px 25px grey);
+}
+
+
+.todo-container {
+    max-width: 600px;
+    margin: 220px auto;
+    padding: 1.5rem;
+
+    position: relative;
+    z-index: 1;
+}
+
+.todo-container header {
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* Form */
+
+#todo-form input{
+    width: 100rem;
+}
+
+#todo-form p {
+    text-align: center;
+    padding: 1rem; 
+    font-size: 22px;
+}
+
+#edit-form p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    
+}
+
+#edit-input {
+    width: 100%;
+}
+
+.form-control {
+    display: flex;
+}
+
+.form-control input {
+    margin-right: 0.3rem;
+}
+
+/* BUTTONS ---------------------------------------- */
+
+.form-control button i,
+.add-todo i,
+#check i{
+    color: var(--ff-button-y);
+}
+
+.form-control button:hover > i,
+.add-todo:hover i,
+#check:hover i{
+    color: var(--ff-hover-p);
+    transition: .6s;
+}
+
+.form-control button:hover,
+.add-todo:hover,
+#check:hover {
+    background-color: var(--ff-button-y);
+    color: var(--ff-button-y);
+    transition: .6s;
+}
+
+
+.cancel-edit-btn {
+    text-align: center;
+    color: white;
+    margin: 1rem auto;
+}
+
+#erase-button,
+.remove-todo {
+    background-color: var(--ff-hover-p);
+}
+
+.cancel-edit-btn i, 
+.remove-todo i {
+    color: var(--ff-button-x);
+}
+
+ .cancel-edit-btn:hover,
+.remove-todo:hover {
+    background-color: var(--ff-hover-p);
+    color: var(--ff-button-x);
+    transition: .6s;
+}
+
+#erase-button:hover,
+.remove-todo:hover,
+.cancel-edit-btn:hover {
+    color: var(--ff-hover-p);
+    background-color: var(--ff-button-x);
+    transition: .6s;
+}
+
+#erase-button:hover i,
+.remove-todo:hover i,
+.cancel-edit-btn:hover i {
+    color: var(--ff-hover-p);
+    transition: .6s;
+}
+
+.edit-todo i,
+#erase-button i {
+    color: var(--ff-button-e);
+}
+
+.edit-todo:hover i {
+    color: var(--ff-hover-p);
+}
+
+.edit-todo:hover,
+#erase-button:hover {
+    background-color: var(--ff-button-e);
+    transition: .6s;
+}
+
+
+/* Todo Toolbar */
+
+#toolbar {
+    padding: 1rem;
+    display: inline;
+}
+
+#toolbar h4 {
+    margin-bottom:  0.5rem;
+}
+
+#flex {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+#search {
+    display: flex;
+    flex-direction: column;
+    
+    width: 50%;
+    border-right: 2px solid #ddd;
+    
+    padding-right: 1rem;
+}
+
+#search form{
+    display: flex;
+}
+
+#search input {
+    width: 100%;
+    margin-right: 0.3rem;
+}
+
+#filter {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+}
+
+#filter select {
+    display: flex;
+    flex: 1;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+/* ToDo List */
+
+.todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1rem;
+
+    border-radius: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.todo button {
+    margin-left: 0.4rem;
+}
+.todo h3 {
+    flex: 1;
+    font-size: 0.9rem;
+}
+
+.done {
+    background-color: var(--ff-task-done);
+}
+
+.done h3 {
+    color: white;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.todo h4 {
+    flex:1;
+    font-size: 0.9rem;
+}
+
