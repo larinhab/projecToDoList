@@ -33,6 +33,7 @@
         <form id="todo-form">
             <p>O que você quer fazer hoje?</p>
             <div class="form-control">
+                <label for="todo-input" class="sr-only">Adicione uma tarefa</label>
                 <input 
                     type="text" 
                     id="todo-input" 
@@ -49,6 +50,7 @@
         <form id="edit-form" class="hide">
             <p>Edite sua tarefa</p>
             <div class="form-control">
+                <label for="edit-input" class="sr-only">Edite sua tarefa</label>
                  <input 
                     type="text" 
                     id="edit-input">
@@ -66,6 +68,7 @@
             <div id="search">
                 <h2>Pesquisar:</h2>
                     <form>
+                        <label for="search-input" class="sr-only">Pesquisar suas tarefas</label>
                         <input 
                             type="text" 
                             id="search-input" 
@@ -78,7 +81,7 @@
 
             <div id="filter" class="">
                 <h2>Filtrar:</h2>
-                
+                <label for="filter-select" class="sr-only">Filtre por tarefas feitas, a fazer e todas</label>
                 <select id="filter-select">
                     <option value="all">Todas</option>
                     <option value="done">Feitas</option>
