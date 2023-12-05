@@ -1,77 +1,91 @@
 
-@media (min-width: 375px) {
+@media only screen and (min-width: 390px) {
     body {
         overflow-y: hidden;
-        height: 10vh;
-        width: 100%;
-        background-color: rgb(26, 160, 250);
+        height: 100h;
+        width: 250%;
     }
     
     #blob {
-        display: none;
+        width: 200%;
+        height: 200%;
     }
 
     .todo-container {
-        width: 30%;
-        margin: 0;
+        width: 200%;
+        margin: 100px auto;
     }
 
-    h1, h2, h3, h4, #todo-form p, #edit-form p {
-        font-size: .5rem;
+    h1 {
+        font-size: 6rem;
+        margin-top: -5rem;
+    }
+
+    h2, h3, h4, #todo-form p, #edit-form p {
+        font-size: 5rem;
+        margin-top: 5rem;
+    }
+
+    .todo {
+        width: 60rem;
+        margin-left: -200px;
+        margin-right: 0;
+        
     }
 
     .todo h3 {
-        font-size: .5rem;
+        font-size: 3rem;
     }
 
     :placeholder-shown,
     #filter select {
-        font-size: .3rem;
+        font-size: 3rem;
     }
 
     .todo-container header  {
-        border-bottom: none;
+        width: 35rem;
     }
 
     #todo-form p {
-        padding: .2rem;
+        width: 60rem;
+        font-weight: bold;
+        margin-left: -12rem;
+        margin-bottom: 2rem;
     }
 
     #todo-form input {
-        width: 5rem;
-        height: 0.5rem;
-        padding: .5rem;
-        margin-left: .2rem;
+        width: 200rem;
     }
 
     button {
-        width: 1rem;
-        height: 1rem;
+        width: 5rem;
+        height: 5rem;
+        border-radius: 40%;
     }
 
     button i {
-        font-size: .5rem;
+        font-size: 3rem;
     }
 
     .flex {
-        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
     }
 
     #search {
+        width: 300rem;
+        margin-left: -12rem;
         border-right: none;
-        width: 100%;
-        padding: .2rem;
     }
 
     #filter {
-        width: 100%;
-        margin: 0;
-        padding: .2rem;
+        margin-right: -12rem;
     }
 
-    .cancel-edit-btn {
-        margin: .2rem 0 0 3rem;
-        padding: .2rem;
+    .form-control input {
+        margin-right: 1rem; 
     }
 }
 

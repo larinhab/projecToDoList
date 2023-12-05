@@ -28,6 +28,10 @@ Projeto realizado por mim, pelas dicas e segmentos do Professor Matheus Battisti
   <img alt="Finalizado" src="./src/assets/readme4.png" width="100%">
 </p>
 
+<p align="center">
+  <img alt="Finalizado" src="./src/assets/reponsive iPhonex.png" width="100%">
+</p>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
